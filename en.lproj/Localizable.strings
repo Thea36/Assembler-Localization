@@ -1,0 +1,93 @@
+/* 
+  Localizable.strings
+  Assembler
+
+  Created by Lena Mattea Stöxen on 28.06.22.
+  
+*/
+"Create your own art!" = "Create your own art!";
+"Chapter 8: Thank you!" = "Chapter 8: Thank you!";
+"Chapter 7: Puppies!" = "Chapter 7: Puppies!";
+"Chapter 6: A nice cuppa tea" = "Chapter 6: A nice cuppa tea";
+"Chapter 5: Some Flowers" = "Chapter 5: Some Flowers";
+"Chapter 4: Smile!" = "Chapter 4: Smile!";
+"Chapter 3: Privacy Please!" = "Chapter 3: Privacy Please!";
+"Chapter 2: A Car" = "Chapter 2: A Car";
+"Chapter 1: A Runner" = "Chapter 1: A Runner";
+"Chapter 0: Intro" = "Chapter 0: Intro";
+
+
+"moveHelp" = "With MOV (move), you can move a value into a register. After selecting MOV, you need to select a destination register. Then you can either choose a register or type in a value with the numberpad as the value you want to move.";
+"moveNotHelp" = "With MVN (move not) you can move an inverted value into a register. All bits in the value will be bitwise inverted. After selecting MVN, you need to select a destination register. Then you can either choose a register or type in a value with the numberpad as the value you want to move. \nExample of bitwise inversion: \n1001 -> 0110";
+"andHelp" = "The logical AND performs a bitwise 'and' operation on the bits in the Rn register and the second operand. The result will be saved in the destination register. An 'and' operation is similar to multiplication. With AND the highest possible value is 255, where all bits are 1 in an 8 bit unsigned number. For more see 'Signed and unsigned Integers'. AND is also often represented as '&' \nExample: 1&1=1 1&0=0 0&0=0";
+"subHelp" = "The SUB (subtract) command works like normal subtraction does. The value of the second operand is subtracted from the value held in the Rn register specified. The answer will be saved in the destination register specified at first. The minimal value possible here is zero.";
+"bicHelp" = "With BIC (bit clear) bits in the register specified can be cleared with the bitmask specified as the second operand. You need to enter a destination register and a register with the value you want to change. The second operand needs to be a bitmask, so the bits you want to clear need to be ones.\nExample without registers:\nBIC 1011, 1000 -> 0011";
+"orrHelp" = "The ORR operator performs a bitwise 'or' operation on the bits in the Rn register and the second operand. The result is going to be saved in the destination register. An 'or' operation is similar to addition. ORR is also often represented as '|' \nExample: 1|1=1 1|0=1 0|0=0";
+"eorHelp" = "With EOR, you can performs a bitwise 'exclusive or' operation on the bits in the Rn register and the second operand. The result is saved in the destination register. An 'exclusive or' operation checks if the bits are different from each other. \nExample: EOR 1,1 -> 0 \nEOR 1,0 -> 1 \nEOR 0,0 ->0";
+"addHelp" = "ADD adds the value in Rn to the value specified in the second operand. The result is then saved in the destination register. With this operation you can get values exceeding the maximum of an 8 bit number (max is 255). So you would need to check that you dont add values with a result exceeding 255. Here, all numbers over 255 will be 255.";
+
+"firstChapterIntroText" = "Welcome to the intoductory chapter. The only command here is MOV, meaning 'move'. With MOV you can move a value into a destination register. So you first need to select the command, then the destination register (with the registernames underneath the command secelction) and then you can either use another register or type in a value with the numberpad. Then either the value in the register or the value typed in will be moved into the destination. To make it a bit easier, the lower half of the registers are already filled in.";
+"secondChapterIntroText" = "The next chapter introduces you to a new command. MVN, which means 'move not'. The MVN command inverts every bit in the operand (a 1 becomes a 0, and a 0 becomes a 1) and moves the resulting value into the destination register. As with MOV you first need to select the command, then the destination and then you can enter the operand.";
+"thirdChapterIntroText" = "In this chapter you'll be introduced AND and ORR. AND and ORR are a bit different than MOV/MVN. They first have a destination register an then two operands. The first operand needs to be a register, the second one can be a register or a value from the numberpad. The two operands will beused to perform a bitwise operation, and the result will be stored in the destination register. AND works a bit like multiplication, an AND with 0 makes a 0, an and with two 1s makes a 1. ORR (or) on the other hand works a bit like addition, where 1+0 make 1 and 1+1 makes 1 (that's a bit confusing, but a bit can't be more than 1). \nI work for a car company and my friends are worried that I'm going to sell them a car. I don't need to sell you a car, because in the next chapter, you will assemble one!";
+"fourthChapterIntroText" = "With assembly you can also use normal addition and subtraction. So you can try this in the following chapter. The key problem with addition and subtraction is that you can cause an over- or underflow. An overflow happens when you try to store a value larger than the available bits can hold. So here any value larger than 255 (2^8 -1) would crash the program. Here this doesn't happen. An underflow is just like an overflow, just with values lower that the bits can hold. Here, the lowest value possible is 0.";
+"fifthChapterIntroText" = "For the next chapter only one new operator is intorduced: BIC (bit clear). With it you can clear bits. This means that you can set bits to zero. An Example would be BIC 1111, 0100 -> 1011. You could see it as an AND with an inverted value. As a help you also have the ORR operator to set bits to 1 again. Can you solve the level with just using BIC?";
+"sixthChapterIntroText" = "The EOR operator is the last missing logic opperator. So now you'll have time to learn it. With EOR (exclusive or) you can find out, if bits are different from each other. Here an example: EOR 0101, 1001 -> 1100. If the two bits compared are equal, a zero is set as the result. If they differ, a one is set as the result. With EOR you will also have the ORR operator to fill in bits. Try to use EOR at least once.";
+"seventhChapterIntroText" = "This chapter only has AND.";
+"eightChapterIntroText" = "In this chapter you only have BIC.";
+"ninthChapterIntroText" = "In the next chapter you will be able to use all commands.";
+"zenChapterIntroText" = "Thank you for playing. I hope you had a bit of fun and I hope you leraned something new. Next you'll be able to make your own art with all commands. There is no solution to it.";
+
+"Meet the Team" = "Meet the Team";
+"Programming and Creative Things" = "Programming and Creative Things";
+"Couldn't find a better picture." = "Couldn't find a better picture.";
+"introLenaText" = "I love coding and drawing. In my free time I read a lot. I really like uni and the people I study and work with.";
+"Mental Health and Tennisballs" = "Mental Health and Tennisballs";
+"A good girl." = "A good girl.";
+"LakshmiQuote" = "'I've given her this tip many times, but Lena wont listen: Buy more treats for me!'";
+"LakshmiIntro" = "Lakshmi is the sweetest soul, she reminds me to be happy and to go outside on long walks with her. She loves playing fetch.";
+"Special thanks to my friends and family. I love you all ♥️" = "Special thanks to my friends and family. I love you all ♥️";
+"Ps: Lakshmi had more than enough treats." = "Ps: Lakshmi had more than enough treats.";
+"This App was made for and won in the 2022 Swift Student Challenge." = "This App was made for and won in the 2022 Swift Student Challenge.";
+
+"Welcome!" = "Welcome!";
+
+"introAssembly" = "
+Welcome to 'The Assembler'. Here you can build little pixel art with bits. To change value of the bits you will use Assembly.
+
+Assembly is a low level programming language. There are different 'versions' of it, because each assembly is uniqe to the prossecor structure. This one is based on one for ARM processors. While each assembly is different from one another the principles of logical operators stay the same. The logical operators used here are common ones.
+
+Assembly only offers a limited amount of operators with wich you can write code. The chapters will guide you through learning some of them. Not all available operators will be used/introduced here.
+
+
+On the left side you'll see the canvas (called registers, from R0-R7). Above the canvas you'll see what the result should look like. Once you move the right values into the registers and recreate the art shown, you will have passed the chapter and will be prompted to move to the next one.
+
+On the top right you can reset the canvas and code view, you can also reset the app to the beginning in chapter 0. You can also find out more about me. And most importantly, you can get detailed explanations of all operators in the current chapter.
+
+The right side of the game is reserved for the code you write and the numberpad. You first need to select an operator. After that you need to select a destination register. What you need to select after that, varies between the commands. Only parts you can select will be enabled, all the other contols will appear in a more gray tone.
+
+I hope you'll have some fun and maybe learn something new!
+";
+
+"Select Comand" = "Select Comand";
+"Start next chapter" = "Start next chapter";
+"UP NEXT" = "UP NEXT";
+"COMMANDS IN THE NEXT CHAPTER" = "COMMANDS IN THE NEXT CHAPTER";
+
+"assemblyTrivia" = "Did you know that Assembly is case insensitive? This means that you can write commands in caps (like done here) or lowercased.";
+
+"signedUnsigned" = "
+There are differnt Types of Integers; signed and unsigned. The main difference is the values they can hold. An unsigned Integer with 8 bits has a minimum of 0 and a maximum value of 255. A signed one can hold values between -128 and 127. The maximum value is reached, whe all bits are 1. the minimum when all bits are 0. For signed Integers, the maximum value is  and the minimum value is . They can hold the same range of numbers. The only difference is in the definiton of the minimum and maximum. Technically the types are the same and the existence of a sign is only a question of interpretation. The difference needs to be made as it can cause overflow/underflow conditions or falsely interpreted values.
+";
+"calculations" =   "
+To convert binary numbers to decimal numbers (the ones we are using in our daily lives) you need to know which one is the bit with the highest value. There are only two possibiliys for that; either its the one on the far left (so, the one on the smallest adress, also called little Endian), or the one on the far right (the one on the biggest adress, also called big endian). Ofcourse there are a lot of converters on the web, and its unlikely that you need to convert binary numbers by hand, but if you wanted to, this is how you would do it:
+You would write the values of the bit next to each other. Here, the values are already written underneath the bit-grid. Theny you would write the binary number above or underneath those values. For every 1 you add the value over/under it together. Here an example, first the binary number, then the values, then the calculation and the final decimal number:
+0 1 1 1
+8,4,2,1
+  4+2+1 = 7
+";
+"'Destination' means a register" = "'Destination' means a register";
+"'Rn' means a register" = "'Rn' means a register";
+"'Operand(2)' means a register or a value typed in with the numberpad" = "'Operand(2)' means a register or a value typed in with the numberpad";
+"Signed and unsigned Integers" = "Signed and unsigned Integers";
+"Converting to decimals" = "Converting to decimals";
+"Trivia" = "Trivia";
