@@ -26,7 +26,8 @@
 "eorHelp" = "With EOR, you can performs a bitwise 'exclusive or' operation on the bits in the Rn register and the second operand. The result is saved in the destination register. An 'exclusive or' operation checks if the bits are different from each other. \nExample: EOR 1,1 -> 0 \nEOR 1,0 -> 1 \nEOR 0,0 ->0";
 "addHelp" = "ADD adds the value in Rn to the value specified in the second operand. The result is then saved in the destination register. With this operation you can get values exceeding the maximum of an 8 bit number (max is 255). So you would need to check that you dont add values with a result exceeding 255. Here, all numbers over 255 will be 255.";
 
-"firstChapterIntroText" = "Welcome to the intoductory chapter. The only command here is MOV, meaning 'move'. With MOV you can move a value into a destination register. So you first need to select the command, then the destination register (with the registernames underneath the command secelction) and then you can either use another register or type in a value with the numberpad. Then either the value in the register or the value typed in will be moved into the destination. To make it a bit easier, the lower half of the registers are already filled in.";
+"firstChapterIntroText" = "The only command here is MOV, meaning 'move'. With MOV you can move a value into a destination register. The destination has to be selected first. The value can be entered with the numberpad, or you can move antother registers value. to do that you simply select the other register instead of a value.";
+
 "secondChapterIntroText" = "The next chapter introduces you to a new command. MVN, which means 'move not'. The MVN command inverts every bit in the operand (a 1 becomes a 0, and a 0 becomes a 1) and moves the resulting value into the destination register. As with MOV you first need to select the command, then the destination and then you can enter the operand.";
 "thirdChapterIntroText" = "In this chapter you'll be introduced AND and ORR. AND and ORR are a bit different than MOV/MVN. They first have a destination register an then two operands. The first operand needs to be a register, the second one can be a register or a value from the numberpad. The two operands will beused to perform a bitwise operation, and the result will be stored in the destination register. AND works a bit like multiplication, an AND with 0 makes a 0, an and with two 1s makes a 1. ORR (or) on the other hand works a bit like addition, where 1+0 make 1 and 1+1 makes 1 (that's a bit confusing, but a bit can't be more than 1). \nI work for a car company and my friends are worried that I'm going to sell them a car. I don't need to sell you a car, because in the next chapter, you will assemble one!";
 "fourthChapterIntroText" = "With assembly you can also use normal addition and subtraction. So you can try this in the following chapter. The key problem with addition and subtraction is that you can cause an over- or underflow. An overflow happens when you try to store a value larger than the available bits can hold. So here any value larger than 255 (2^8 -1) would crash the program. Here this doesn't happen. An underflow is just like an overflow, just with values lower that the bits can hold. Here, the lowest value possible is 0.";
@@ -51,23 +52,6 @@
 
 "Welcome!" = "Welcome!";
 
-"introAssembly" = "
-Welcome to 'The Assembler'. Here you can build little pixel art with bits. To change value of the bits you will use Assembly.
-
-Assembly is a low level programming language. There are different 'versions' of it, because each assembly is uniqe to the prossecor structure. This one is based on one for ARM processors. While each assembly is different from one another the principles of logical operators stay the same. The logical operators used here are common ones.
-
-Assembly only offers a limited amount of operators with wich you can write code. The chapters will guide you through learning some of them. Not all available operators will be used/introduced here.
-
-
-On the left side you'll see the canvas (called registers, from R0-R7). Above the canvas you'll see what the result should look like. Once you move the right values into the registers and recreate the art shown, you will have passed the chapter and will be prompted to move to the next one.
-
-On the top right you can reset the canvas and code view, you can also reset the app to the beginning in chapter 0. You can also find out more about me. And most importantly, you can get detailed explanations of all operators in the current chapter.
-
-The right side of the game is reserved for the code you write and the numberpad. You first need to select an operator. After that you need to select a destination register. What you need to select after that, varies between the commands. Only parts you can select will be enabled, all the other contols will appear in a more gray tone.
-
-I hope you'll have some fun and maybe learn something new!
-";
-
 "Select Comand" = "Select Comand";
 "Start next chapter" = "Start next chapter";
 "UP NEXT" = "UP NEXT";
@@ -75,19 +59,80 @@ I hope you'll have some fun and maybe learn something new!
 
 "assemblyTrivia" = "Did you know that Assembly is case insensitive? This means that you can write commands in caps (like done here) or lowercased.";
 
-"signedUnsigned" = "
-There are differnt Types of Integers; signed and unsigned. The main difference is the values they can hold. An unsigned Integer with 8 bits has a minimum of 0 and a maximum value of 255. A signed one can hold values between -128 and 127. The maximum value is reached, whe all bits are 1. the minimum when all bits are 0. For signed Integers, the maximum value is  and the minimum value is . They can hold the same range of numbers. The only difference is in the definiton of the minimum and maximum. Technically the types are the same and the existence of a sign is only a question of interpretation. The difference needs to be made as it can cause overflow/underflow conditions or falsely interpreted values.
-";
-"calculations" =   "
-To convert binary numbers to decimal numbers (the ones we are using in our daily lives) you need to know which one is the bit with the highest value. There are only two possibiliys for that; either its the one on the far left (so, the one on the smallest adress, also called little Endian), or the one on the far right (the one on the biggest adress, also called big endian). Ofcourse there are a lot of converters on the web, and its unlikely that you need to convert binary numbers by hand, but if you wanted to, this is how you would do it:
-You would write the values of the bit next to each other. Here, the values are already written underneath the bit-grid. Theny you would write the binary number above or underneath those values. For every 1 you add the value over/under it together. Here an example, first the binary number, then the values, then the calculation and the final decimal number:
-0 1 1 1
-8,4,2,1
-  4+2+1 = 7
-";
+"signedUnsigned" = "There are differnt Types of Integers; signed and unsigned. The main difference is the values they can hold. An unsigned Integer with 8 bits has a minimum of 0 and a maximum value of 255. A signed one can hold values between -128 and 127. The maximum value is reached, whe all bits are 1. the minimum when all bits are 0. For signed Integers, the maximum value is  and the minimum value is . They can hold the same range of numbers. The only difference is in the definiton of the minimum and maximum. Technically the types are the same and the existence of a sign is only a question of interpretation. The difference needs to be made as it can cause overflow/underflow conditions or falsely interpreted values.";
+"calculations" =  "To convert binary numbers to decimal numbers (the ones we are using in our daily lives) you need to know which one is the bit with the highest value. There are only two possibiliys for that; either its the one on the far left (so, the one on the smallest adress, also called little Endian), or the one on the far right (the one on the biggest adress, also called big endian). Ofcourse there are a lot of converters on the web, and its unlikely that you need to convert binary numbers by hand, but if you wanted to, this is how you would do it:
+You would write the values of the bit next to each other. Here, the values are already written underneath the bit-grid. Theny you would write the binary number above or underneath those values. For every 1 you add the value over/under it together.";
 "'Destination' means a register" = "'Destination' means a register";
 "'Rn' means a register" = "'Rn' means a register";
 "'Operand(2)' means a register or a value typed in with the numberpad" = "'Operand(2)' means a register or a value typed in with the numberpad";
 "Signed and unsigned Integers" = "Signed and unsigned Integers";
 "Converting to decimals" = "Converting to decimals";
 "Trivia" = "Trivia";
+"Privacy Policy" = "Privacy Policy";
+
+
+"Herzlich Willkommen!" = "Welcome!";
+"Intro1.1" = "Welcome at 'The Assembler'! \nThank you for downloading the app. \nHere you can use Assembly and logical operations to create little pieces of art.";
+"Intro1.2" = "Hav you ever thought about why nubmers have a certain value? Let us define, that we use symbols (letters, numbers, emojis, signs) to describe a value.";
+
+"Zahlensysteme (vereinfacht)" = "Number system (simplified)";
+"Intro2.1" = "Values can be easily converted between different systems, like yards to meters. So in essence, you can use different symbols to display the same value. An example would be the roman number system. Where a 'V' means '5' and an 'I' means '1'.";
+"Intro2.2" = "There are many such systems. The decimal system uses 10 symbols (0-9). The binary system uses only two (0-1).";
+"Intro2.3" = "One of the most importatnt things for a number system is, that maths still needs to work. If you add two values in binary, the result needs to be the same value as in all other number systems. That way, values van be converted to the decimal system, and then be calculated there.";
+
+"Computer (stark vereinfacht)" = "Computers (overly simplified)";
+"Intro3.1" = "Computers are made up from logical gates. Billions of them. They can decide to turn 'power on' (1) or to turn 'power off' (0). Just like zero and one in the binary system. One zero/one in binary is called 'Bit'";
+"Intro3.2" = "Because gates can only decide between 0 and 1, computers simply do theri calculations in the binary system. After that, the values only need to be converted back to the decimal system. Computers can convert values to the binary system, there they can save them and do calculations with them.";
+"Intro3.3" = "Gates themselves can only make descisions, not save things. When combining multiple gates in a loop, you can create so called FlipFlops to save one Bit. with multiple FlipFlops you ccan build registers. These can save multiple bits, like 8, 16, 32. ";
+
+"Assembly (vereinfacht)" = "Assembly (simplified)";
+"Tippe mich an!" = "Tap me!";
+"Intro4.1" = "In Assembly you can manipulate the values saved in the registers. The registers here have 8 bit each. 8 bit are called 1 byte. To recognise values in the binary system, they are prefixed with a '0b'.";
+"Intro4.2" = "Assembly is a very low level programming language. Which operators are available in Assembly is decided by the gates used int the computer. So assembly is a bit different for each type od computer.";
+
+/* Accessibility - VoiceOver Text */
+"A button with the number 0" = "A Button with the number 0";
+"A 0 will be added to the binary number you're entering" = "A 0 will be added to the binary number you're entering.";
+"A button with the number 1" = "A button with the number 1";
+"A 1 will be added to the binary number you're entering" = "A 1 will be added to the binary number you're entering.";
+"Auswählen eines Registers" = "Choose a register";
+"register "  = "register ";
+"Auswählen eines Komandos" = "Choose a command";
+"Komando " = "Command";
+"Register %@ mit Wert %@ soll Wert  %@ haben" = "Register %@ with value %@ should have value %@";
+"Picture of me" = "Picture of me";
+"Picture of Lakshmi, a chocolate Labrador" = "Picture of Lakshmi, a chocolate Labrador";
+/* There is an issue because i dont know if you can toggle the bit */
+"%@ Bits next to each other." = "%@ Bits next to each other.";
+"A visualization of a Bit. It has a value of %@" = "A visualization of a Bit. It has a value of %@";
+"A visualisation of an 'AND' gate. The inputs are 1 & 0, the result is 0" = "A visualisation of an 'AND' gate. The inputs are 1 & 0, the result is 0";
+"A visualisation of an 'AND' gate. The inputs are 1 & 1, the result is 1" = "A visualisation of an 'AND' gate. The inputs are 1 & 1, the result is 1";
+"A visualisation of an 'AND' gate. The inputs are 0 & 1, the result is 0" = "A visualisation of an 'AND' gate. The inputs are 0 & 1, the result is 0";
+"Decimal to binary conversion" = "Decimal to binary conversion";
+"0 becomes 0b0" = "0 becomes 0b0";
+"1 becomes 0b1" = "1 becomes 0b1";
+"2 becomes 0b0.1" = "2 becomes 0b0.1";
+"3 becomes 0b11" = "3 becomes 0b11";
+"A view showing how differnet symbols can be used to describe the same value. The examples are the number 10, the word code, the concept of music, and the nuber 5." = "A view showing how differnet symbols can be used to describe the same value. The examples are the number 10, the word code, the concept of music, and the nuber 5.";
+"Emoji H.T.M.L like code" = "Emoji H.T.M.L like code";
+"Emoji of Guitars" = "Emoji of Guitars";
+"Emoji of a Dice showing the number 5" = "Emoji of a Dice showing the number 5";
+"Two images, one showing a cmputer chip and one showing a cpu." = "Two images, one showing a cmputer chip and one showing a cpu.";
+"A four bit register with the value 0. Then the value 7 is moved into it. now the register reads 0.1.1.1 in binary. Then 0.0.0.1 is moved into the register. it now reads 0.0.0.1." = "A four bit register with the value 0. Then the value 7 is moved into it. Now the register reads 0.1.1.1 in binary. Then 0.0.0.1 is moved into the register. it now reads 0.0.0.1.";
+"A visualisation of a 4 bit register with the value 12. or 1.1.0.0 in binary. Through tapping you can change the value by toggeling the bits between 0 & 1." = "A visualisation of a 4 bit register with the value 12. or 1.1.0.0 in binary. Through tapping you can change the value by toggeling the bits between 0 & 1.";
+"A visualisation of an 8 bit register with the value 240. or 1.1.0.0 in binary. Through tapping you can change the value by toggeling the bits between 0 & 1." = "A visualisation of an 8 bit register with the value 240. or 1.1.0.0 in binary. Through tapping you can change the value by toggeling the bits between 0 & 1.";
+"A view showing 1+1 in binary system, as well as 1+1 in the decimal system. Both have the same result." = "A view showing 1+1 in binary system, as well as 1+1 in the decimal system. Both have the same result.";
+"A visualisation of how the value 5 can look in different systems. There is a 5 in binary, a 5 on a dice, a 5 as a 'V' in roman numbers." = "A visualisation of how the value 5 can look in different systems. There is a 5 in binary, a 5 on a dice, a 5 as a 'V' in roman numbers.";
+
+/* Error Strings */
+"You have caused an overflow! Unexpected behaviour might follow." = "You have caused an overflow!The value was larger than the register can hold. Unexpected behaviour might follow.";
+"You have caused an underflow! Unexpected behaviour might follow." = "You have caused an underflow! The value was smaller than the register can hold. Unsigned Integers cannot hold negative numbers. Unexpected behaviour might follow.";
+
+
+"Help translating this app" = "Help translating this app";
+"Try changing the result by tapping the bits" = "Try changing the result by tapping the bits";
+"If the first bit is 1, all the other bits need to be inverted. The first bit is used to show the sign of the value." = "If the first bit is 1, all the other bits need to be inverted. The first bit is used to show the sign of the value.";
+"This value is now multiplied with -1." = "This value is now multiplied with -1.";
+"Now 1 is subtracted from the value" = "Now 1 is subtracted from the value";
+
+"Show Intro Again" = "Show Intro Again";

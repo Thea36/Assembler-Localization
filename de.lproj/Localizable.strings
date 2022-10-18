@@ -17,7 +17,7 @@
 "Chapter 8: Thank you!" = "Kapitel 8: Danke!";
 "Chapter 7: Puppies!" = "Kapitel 7: Welpen!";
 "Chapter 6: A nice cuppa tea" = "Kapitel 6: Eine heiße Tasse Tee";
-"Chapter 5: Some Flowers" = "Kapitel 5: Dabke für die Blumen";
+"Chapter 5: Some Flowers" = "Kapitel 5: Danke für die Blumen";
 "Chapter 4: Smile!" = "Kapitel 4: Bitte Lächeln!";
 "Chapter 3: Privacy Please!" = "Kapitel 3: Privatsphäre!";
 "Chapter 2: A Car" = "Kapitel 2: Das Auto";
@@ -32,7 +32,7 @@
 "ADD Destination, Rn, Operand2" = "ADD Ziel, Rn, Operand2";
 "EOR Destination, Rn, Operand2" = "EOR Ziel, Rn, Operand2";
 
-"moveHelp" = "Mit MOV (move/bewegen), kannst du einen Wert in ein Register bewegen. Nach dem du MOV asugewählt hast musst du ein Zielregister auswählen. Danach kannst du ein anderes Register auswählen, dessen Wert dann in das Ziel bewegt wird, oder einen Wert mit dem Nummernfeld eingeben.";
+"moveHelp" = "Mit MOV (move/bewegen), kannst du einen Wert in ein Register bewegen.";
 "moveNotHelp" = "Mit MVN (move not/ nicht bewegen) wird ein invertierter Wert in ein Zielregister bewegt. Alle Bits in in dem Wert werden bitweise invertiert. Nachdem MVN ausgewählt wurde, muss ein Zielregister ausgewählt werden. Danach muss der zu bewegende Wert mit dem Nummernfeld oder durch ein Register dessen Wert genutzt werden soll eingegeben werden. \nEin Beispiel für bitweise Invertierung: \n1001 -> 0110";
 "andHelp" = "Das logische 'und' (AND) macht eine bitweise Ver-undung zwischen den Bits des Rn-Registers und des zweiten Operands. Das Ergebnis wird dann in dem Zielregister gespeichert. Eine 'und' Operation ist ähnlich zur Multiplokation. Das höchst mögliche Ergebnis mit einer 'und' Operation ist 255, wenn es sich um vorzeichenlose Ganzzahlen (Integer) handelt. Mehr dazu findest du bei 'Vorzeichenbehaftete und vorzeichenlose Integer'. AND wird oft so dargestellt: '&' \nBeispiel für 'und': 1&1=1 1&0=0 0&0=0";
 "subHelp" = "Das SUB (subtraktion) funktioniert genauso wie normale Subtraktion. Der Wert des zweiten Operands wird vom Wert des Rn-Registers abgezogen und im Zielregister gespeichert. Mit SUB ist es möglich einen sogenannten UNDERFLOW zu erzeugen. Dies passiert, wenn der errechnete Wert kleiner als der minimal Mögliche ist. Bei vorzeichenlosen Ganzzahlen ist das 0. Hier können keine Werte kleiner als 0 entstehen. Das habe ich vorher ausgeschlossen, da die App sonst abstürzen würde.";
@@ -41,16 +41,16 @@
 "eorHelp" = "Mit EOR, kannst du bitweise 'exklusiv oder' operationen mit den Bits in Rn und denen im zweiten Wert ausführen. Das Ergebnis wird im Zielregister gespeichert. Ein 'exklusiv oder' prüft ob die Bits verschieden sind. \nBeispiel ohne Nennung von Registern: EOR 1,1 -> 0 \nEOR 1,0 -> 1 \nEOR 0,0 ->0";
 "addHelp" = "ADD addiert den Wert im Rn und den im zweiten Operand. Das Ergebnis wird im Zielregister gespeichert. Mit ADD kann ein OVERFLOW entstehen. Dies passiert, wenn die Summe der beiden Werte größer ist, als der maximal Mögliche. Bei 8 Bit und vorzeichenloser Interpretation ist das Maximum 255. Da die App sonst abstürzen würde, habe ich vorher ausgeschlossen, dass dies passieren kann.";
 
-"firstChapterIntroText" = "Willkommen im ersten Kapitel. Das einzige Komando hier ist MOV. Mit MOV kannst du einen Wert in ein Register eintragen. Dieser Wert kann entweder mit dem Nummernfeld eingetragen werden, oder indem du ein Register angibst, dessen Wert du bewegen möchtest. Als Erstes musst du das Komando auswählen, dann das Zielregister in das du den Wert bewegen möchtest. Als Letztes gibst du dann den Wert an. Um es ein bisschen einfacher zu machen ist die Hälfte der Register schon mit den richtigen Werten gefüllt.";
-"secondChapterIntroText" = "Das Nächste Kapitel hat ein neues Komando. MVN, das bedeutet move not, nicht bewegen. Das MVN Komando invertiert alle Bits im Operanden (eien 1 wird zur 0, eine 0 zur 1) und bewegt diese dann in das Zielregister. Wie bei MOV musst du zuerst das Komando, dann das Ziel und zum Schluss dann ein Register dessen Wert du bewegen möchtest oder einen Wert mit dem Nummernfeld eingeben.";
-"thirdChapterIntroText" = "In diesem Kapitel kannst du AND und ORR ausprobieren. Diese sind ein bisschen anders als MVN/MOV. Bei ihnen musst du auch zuerst das Kommando und dann das Ziel auswählen, jedoch musst du hier zwei Operanden angeben, die miteinender verglichen werden sollen. Der Erste kann dabei ein Register oder Nummernfeldwert sein, der zweite Operand muss jedoch mit dem Nummernfeld eingegeben werden. AND ist ein bisschen so wie Multiplikation. 0 und 0 ergibt 0, 0 und 1 ergibt 0, 1 und 1 ergibt 1. ORR ist eher wie Addition. 1+0=1, doch 1+1 ist ebenfalls 1. Ich arbeite für eine Firma die Autos herstellt und meine Freunde machen sich manchmal Sorgen, dass ich ihnen ein Auto verkaufen will. Dir muss ich jedoch Keins verkaufen, denn im nächsten Kapitel wirst du Eins bauen!";
-"fourthChapterIntroText" = "Mit Assembly kannst du auch normale Subtraktion und Addition verwenden. Deshalb kannst du das im nächsten Kapitel ausprobieren. Das Problem mit Addition und Subtraktion ist, dass du einen OVERFLOW oder UNDERFLOW erzeugen kannst. Dann stürzt dein Programm ab. Bei einem Underflow versuchst du einen kleineren Wert als das Minimum einzutragen. Bei einem Overflow verscuhst du einen Wert grüßer als das Maximum einzutragen. Hier brauchst du dir jedoch keine Sorgen zu machen, ich habe verhindert dass das passieren kann. Das Maximum ist wenn alle Bits 1 sind, das Minimum wenn Alle 0 sind.";
-"fifthChapterIntroText" = "Für das nächste Kapitel gibt es nur ein neues Komando. BIC (bit clear/Bit löschen). Das bedeutet, dass du bits nicht nur setzen kannst (wie mit ORR) sonder auch lschen kannst. Der zweite operand wird dabei als Bitmaske verwendet. An jeder Stelle an der die Maske eine 1 hat, wird eine 0 ins Ziel gesetzt. Kannst du das kapitel nur mit BIC lösen?";
-"sixthChapterIntroText" = "EOR ist der letzt logische Operator. Mit EOR (exklusives oder) kannst du prüfen ob zwei Bits unterschiedich sind. Eine 1 und eine 0 ergeben eine 1, zwei 0en ergeben eine 0,zwei 1en ergeben ebenfalls eine 0. Hier ein Beispiel: EOR 0101, 1001 -> 1100. Versch es doch mal!";
+"firstChapterIntroText" = "Der einzige Befehl hier ist MOV. Mit MOV kannst du einen Wert in ein Register eintragen. Dieser Wert kann entweder mit dem Nummernfeld eingetragen werden, oder indem du ein Register angibst, dessen Wert du bewegen möchtest. Als Erstes musst du den Befehl auswählen, dann das Zielregister in das du den Wert bewegen möchtest. Als Letztes gibst du dann den Wert an.";
+"secondChapterIntroText" = "Das Nächste Kapitel hat einen neuen Befehl. MVN, das bedeutet move not, invertiert bewegen. Der MVN Befehl invertiert alle Bits im Operanden (eine 1 wird zur 0, eine 0 zur 1) und bewegt diese dann in das Zielregister. Wie bei MOV musst du zuerst der Befehl, dann das Ziel und zum Schluss dann ein Register dessen Wert du bewegen möchtest oder einen Wert mit dem Nummernfeld eingeben.";
+"thirdChapterIntroText" = "In diesem Kapitel kannst du AND und ORR ausprobieren. Diese sind ein bisschen anders als MVN/MOV. Bei ihnen musst du auch zuerst den Befehl und dann das Ziel auswählen, jedoch musst du hier zwei Operanden angeben, die miteinender verglichen werden sollen. Der Erste kann dabei ein Register oder Nummernfeldwert sein, der zweite Operand muss jedoch mit dem Nummernfeld eingegeben werden. AND ist ein bisschen so wie Multiplikation. 0 und 0 ergibt 0, 0 und 1 ergibt 0, 1 und 1 ergibt 1. ORR ist eher wie Addition. 1+0=1, doch 1+1 ist ebenfalls 1. Ich arbeite für eine Firma die Autos herstellt und meine Freunde machen sich manchmal Sorgen, dass ich ihnen ein Auto verkaufen will. Dir muss ich jedoch Keins verkaufen, denn im nächsten Kapitel wirst du Eins bauen!";
+"fourthChapterIntroText" = "Mit Assembly kannst du auch normale Subtraktion und Addition verwenden. Deshalb kannst du das im nächsten Kapitel ausprobieren. Das Problem mit Addition und Subtraktion ist, dass du einen OVERFLOW oder UNDERFLOW erzeugen kannst. Dann stürzt dein Programm ab. Bei einem Underflow versuchst du einen kleineren Wert als das Minimum einzutragen. Bei einem Overflow versuchst du einen Wert grüßer als das Maximum einzutragen. Hier brauchst du dir jedoch keine Sorgen zu machen, ich habe verhindert dass das passieren kann. Das Maximum ist, wenn alle Bits 1 sind, das Minimum, wenn alle Bits 0 sind.";
+"fifthChapterIntroText" = "Für das nächste Kapitel gibt es nur einen neuen Befehl. BIC (bit clear/Bit löschen). Das bedeutet, dass du bits nicht nur setzen kannst (wie mit ORR) sonder auch lschen kannst. Der zweite operand wird dabei als Bitmaske verwendet. An jeder Stelle an der die Maske eine 1 hat, wird eine 0 ins Ziel gesetzt. Kannst du das Kapitel nur mit BIC lösen?";
+"sixthChapterIntroText" = "EOR ist der letzt logische Operator. Mit EOR (exklusives oder) kannst du prüfen ob zwei Bits unterschiedich sind. Eine 1 und eine 0 ergeben eine 1, zwei 0en ergeben eine 0,zwei 1en ergeben ebenfalls eine 0. Hier ein Beispiel: EOR 0101, 1001 -> 1100. Versuch es doch mal!";
 "seventhChapterIntroText" = "In diesem Kapitel gibt es nur AND. Manche sagen, dass ist nicht möglich! Doch es ist möglich, dass Kapitel nur mit AND zu lösen. Schaffst du das?";
 "eightChapterIntroText" = "Hier gibt es nur BIC. Pass auf dass du dich nicht vertippst; sonst musst du von vorne anfangen.";
-"ninthChapterIntroText" = "In diesem Kapitel kannst du alle Komandos nutzen. Viel Spaß.";
-"zenChapterIntroText" = "Danke! Ich feue mich, dass du es bis hier hin geschafft hast. Ich hoffe du hattest Spaß und hast vielleicht sogar ein bisschen was neues gelernt. Als nächstes kannst du deine eigenen Kunstwerke erschaffen. Es gibt also keine Lösung, aber du kannst alle Komandos nutzen.";
+"ninthChapterIntroText" = "In diesem Kapitel kannst du alle Befehle nutzen. Viel Spaß.";
+"zenChapterIntroText" = "Danke! Ich feue mich, dass du es bis hier hin geschafft hast. Ich hoffe du hattest Spaß und hast vielleicht sogar ein bisschen was Neues gelernt. Als nächstes kannst du deine eigenen Kunstwerke erschaffen. Es gibt also keine Lösung, aber du kannst alle Befehle nutzen.";
 
 "Meet the Team" = "Lerne das Team kennen";
 "Programming and Creative Things" = "Programmierung und kreative Sachen";
@@ -59,34 +59,14 @@
 "Mental Health and Tennisballs" = "Gesundheit und Tennisbälle";
 "A good girl." = "Ein sehr guter Hund";
 "LakshmiQuote" = "'Ich habe ihr das schon mehrfach gesagt; aber Lena kauft einfach nicht mehr Leckerlies für mich!'";
-"LakshmiIntro" = "Lakshmi ist eine treue Seele, sie erinnert mich daran glücklich zu sein und lange Spaziergänge zu machen. Sie liebt es mit Bällen zu spielen.";
-"Special thanks to my friends and family. I love you all ♥️" = "Besonderer Danke gilt meinen Freunden und meiner Familie. Ich hab euch lieb ♥️";
+"LakshmiIntro" = "Lakshmi ist eine treue Seele, sie erinnert mich daran glücklich zu sein und lange Spaziergänge zu machen. Sie liebt es mit Tennisbällen zu spielen.";
+"Special thanks to my friends and family. I love you all ♥️" = "Besonderer Dank gilt meinen Freunden und meiner Familie. Ich hab euch lieb ♥️";
 "Ps: Lakshmi had more than enough treats." = "Ps: Lakshmi hatte mehr als genug Leckerlies";
 "This App was made for and won in the 2022 Swift Student Challenge." = "Dies App wurde für die Swift Student Challenge 2022 gemacht und hat gewonnen.";
 
 "Welcome!" = "Willkommen!";
 
-"introAssembly" = "
-Willkommen bei 'The Assembler'. Hier kannst du mit Bits kleine Pixel kunstwerke erschaffen. Um die Bits zu setzen nutzt du Assembly.
-Assembly ist eine low level Programmiersprache. Es gibt verschiedene Varianten davon, da Assembly speziell für die jeweilige Prozessorstruktur ist auf der es läuft. Dies Version basiert auf der fpr ARM-Prozessoren. Obwohl jedes Assembly unterschiedlich ist, sind die Prinzipien und logischen Operatoren überall gleich. Die logischen Operatoren hier sind sehr häufig Genutzte.
-
-Assembly hat nur eine limitierte Anzahl von Komandos mit denen du Code schreiben kannst. In den einzelen Kapiteln wirst du einige davon kennenlernen. Nicht alle Operatoren werden dir in jedem Kapitel zur Verfügung stehen.
-
-Nun zur Funktionsweise:
-Auf der linken Seite kannst du deine Leinwand sehen. Diese besteht aus 8 Zeilen, die Register genannt werden und von 0-7 hochgezählt werden. Direkt darüber kannst du dann sehen, wie die Lösung des Kapitels aussehen soll. Auf der rechten Seite neben jedem Register kannst du den dezimalen Wert des Registers sehen.
-
-Sobald du die Lösung nachgemalt hast, wirst du zum nächsten Kapitel weitergeleitet.
-
-Oben rechts kannst du das Kapitel reseten oder nochmal im Nullten Kapitel anfangen.
-Außerdem gibt es dort oben eine Seite die weitere Informationen über mich enthält.
-Was natürlich am wichtigsten ist: mit dem Fragezeichen werden dir noch mal alle Komandos erklärt und du kannst dir zusätzliche Informationen über Assembly durchlesen.
-
-Auf der rechten Seite wird programmiert. Dort kannst du ein Komando auswähen, sowie Register und Zahlen mit dem Nummernfeld eingeben.
-
-Ich hoffe du hast Spaß und lernst vielleicht sogar etwas Neues!
-";
-
-"Select Comand" = "Komando auswählen";
+"Select Comand" = "Befehl auswählen";
 
 
 "Congratulations!" = "Glückwunsch!";
@@ -96,30 +76,93 @@ Ich hoffe du hast Spaß und lernst vielleicht sogar etwas Neues!
 "UP NEXT" = "ALS NÄCHSTES";
 "COMMANDS IN THE NEXT CHAPTER" = "KOMANDOS IM NÄCHSTEN KAPITEL";
 
-"assemblyTrivia" = "Wusstes du, dass es Assembly egal ist, ob du mit Groß- oder Kleinbuchstaben schreibst? Das bedeutet, dass du die Befehle auch kleinschreiben kannst. Hier schreibe ich sie jedoch groß, da ich das schöner finde.";
+"assemblyTrivia" = "Wusstes du, dass es Assembly egal ist, ob du mit Groß- oder Kleinbuchstaben schreibst? Das bedeutet, dass du die Befehle auch klein schreiben kannst. Hier schreibe ich sie jedoch groß, da ich das schöner finde.";
 
-"signedUnsigned" = "
-Es gibt verschiedene Typen von Integern (Ganzzahlen). Es gibt Vorzeichenbehaftete und Vorzeichenlose. Eigentlich sind die beiden Typen gleich, die Existenz einens Vorzeichen ist nur eine verschiedene interpretation der Bits.
-Vorzeichenbehaftet bedeutet, dass ein Wert positiv oder negativ sein kann. Also bei 8 Bit können die Zahlen von -128 bis 127 dargestellt werden.
-Vorzeichenlos bedeutet, dass ein Wert nur positiv sein kann. Somit können damit Zahlen zwischen 0 und 255 dargestellt werden.
-Die beiden Typen werden unterschieden da Zahlen sonst falsch interpretiert werden oder UNDERFLOWS/OVERFLOWS entstehen können.
-Das Maximum ist erreicht well alle Bits 1 sind, das Minimum wenn alle 0 sind. Deshalb können Werte nicht größer sein als das Maximum, die Bits können ja nicht mehr 1 sein als sie es schon sind.
-";
-"calculations" =   "
-Um binäre Zahlen in Dezimalzahlen (die, die wir im normalen Leben nutzen) zu konvertieren musst du zuerst wissen, welches das Bit mit dem höchsten Wert ist.
-Es gibt da nur zwei Möglichkeiten. Entweder ist es das Bit welches an der niedrigsten Adresse steht (auch Little Endian genannt), oder das Bit welches an der höchsten Adresse steht (auch Big Endian genannt).
-Man kann das auch als vorwärts oder rückwärts lesen betrachten. Je nachem in welche Richtung das Register gelesen wird, hat es unterschiedliche Werte. Hier werden die Werte von rechts nach links gelesen. Das Bit mit dem hächsten Wert ist also auf der linken Seite.
-Falls jetzt die frage aufkommt, was 'Bit mit höchstem Wert' eigentlich bedeutet, das kommt jetzt. Beim konvertieren wird jedem Bit ein dezimaler Wert zugewieden. Dies passiert in entgegengesetzter richtung. Die Werte sind potenzen von 2. Das Bit Rechts hat also einen Wert von 1, das daneben 2, dann 4, dann 8 usw. Das bedeutet, dass wenn die binäre Zahl 1001 wäre, dann würden wir eine 1 für das letzte Bit aufschreiben und eine 8 für das Erste. Diese beiden Zahlen müssen dann addiert werden. Also wird aus 1001 eine 9.
-Am einfachsten ist es, wenn du für jedes Bit den Wert darunter schreibst und dann die durchschtreichst, deren Bit eine 0 ist. 
-Hier noch ein Beispiel:
-0 1 1 1
-8,4,2,1
-  4+2+1 = 7
-";
+"signedUnsigned" = "Es gibt verschiedene Typen von Integern (Ganzzahlen). Es gibt Vorzeichenbehaftete und Vorzeichenlose. Eigentlich sind die beiden Typen gleich, die Existenz eines Vorzeichen ist nur eine unterschiedliche Interpretation der Bits.
+Vorzeichenbehaftet bedeutet, dass ein Wert positiv oder negativ sein kann. Also bei 8 Bit können die Zahlen von -128 bis 127 dargestellt werden. Zusammen mit der Null sind das 2 hoch 8 = 256 unterschiedliche Zahlen.
+
+Vorzeichenlos bedeutet, dass ein Wert nur positiv sein kann. Somit können Zahlen zwischen 0 und 255 dargestellt werden. Das sind zusammen mit der Null ebenfalls 2 hoch 8 = 256 verschiedene Zahlen.
+Die beiden Typen werden unterschieden, da Zahlen sonst falsch interpretiert werden oder UNDERFLOWS/OVERFLOWS entstehen können.
+Das Maximum ist erreicht wenn alle Bits 1 sind, das Minimum wenn alle 0 sind. Deshalb können Werte nicht größer sein als das Maximum, die Bits können ja nicht mehr 1 sein als sie es schon sind.";
+"calculations" = "Um binäre Zahlen in Dezimalzahlen (die, die wir im normalen Leben nutzen) zu konvertieren, musst du zuerst wissen, welches das Bit mit dem höchsten Wert ist.
+Es gibt da nur zwei Möglichkeiten. Entweder ist es das Bit, welches an der niedrigsten Adresse steht (auch Little Endian genannt), oder das Bit welches an der höchsten Adresse steht (auch Big Endian genannt).
+Man kann das auch als vorwärts oder rückwärts lesen betrachten. Je nachem in welche Richtung das Register gelesen wird, hat es unterschiedliche Werte. Hier werden die Werte von rechts nach links gelesen. Das Bit mit dem höchsten Wert ist also auf der linken Seite.
+Was bedeutet 'Bit mit höchstem Wert' eigentlich? Beim Konvertieren wird jedem Bit ein dezimaler Wert zugewiesen. Die Werte sind Potenzen von 2. Das Bit rechts hat hier also einen Wert von 1, das daneben 2, dann 4, dann 8 usw. Das bedeutet, wenn die binäre Zahl 1001 wäre, dann würden wir eine 1 für das letzte Bit aufschreiben und eine 8 für das Erste. Diese beiden Zahlen müssen dann addiert werden. Also wird aus 1001 eine 9.
+Am einfachsten ist es, wenn du für jedes Bit den Wert darunter schreibst und dann die durchstreichst, deren Bit eine 0 ist. Hier kannst du es testen.";
+"Try changing the result by tapping the bits" = "Versuche das Ergebnis zu verändern indem du die Bits antippst.";
+
 "'Destination' means a register" = "'Destination' meint ein Register";
 "'Rn' means a register" = "'Rn' meint ein Register";
  "'Operand(2)' means a register or a value typed in with the numberpad" = "'Operand(2)' meint ein Register oder einen Wert der mit dem Nummernfeld eingegeben wurde";
-"Signed and unsigned Integers" = "Vorzeichenbehaftete und Vorzeichenlose Integer";
+"Signed and unsigned Integers" = "Vorzeichenbehaftete und vorzeichenlose Integer";
 "Converting to decimals" = "Konvertierung ins Dezimalsystem";
 "Trivia" = "Unnützes Wissen";
 "Privacy Policy" = "Datenschutzerklärung";
+
+
+"Herzlich Willkommen!" = "Herzlich Willkommen!";
+"Intro1.1" = "Willkommen bei Assembler! \nDanke, dass du die App herruntergeladen hast. \nHier kannst du mit Asssembly und logischen Operatoren kleine Kunstwerke erschaffen";
+"Intro1.2" = "Hast du schon mal darüber nachgedacht, warum Zahlen einen bestimmten Wert haben? Lass uns definieren, dass Symbole (Buchstaben, Ziffern, Emojis, Zeichen) genutzt werden, um Werte zu beschreiben.";
+
+"Zahlensysteme (vereinfacht)" = "Zahlensysteme (vereinfacht)";
+"Intro2.1" = "Werte können zwischen verschiedenen Systemen umgewandelt werden, so wie z.B. Meter in Yards. Du kannst also verschiedene Symbole nutzen, um das Gleiche darzustellen. Als Beispiel: 'A' könnte '1' bedeuten, 'B' '2' usw. In den römischen Zahlen bedeutet 'V' '5' und 'I' '1'.";
+"Intro2.2" = "Im mathematischen nennt man diese Systeme 'Zahlensysteme'. Das Dezimalsystem nutzt die Ziffern 0 bis 9 um Werte zu beschreiben. Im Binärsystem wird nur 0 und 1 benutzt.";
+"Intro2.3" = "Eine der wichtigsten Regeln ist jedoch, dass das Verrechnen von Werten in anderen Zahlensystemen zu den gleichen Werten führen muss. Da Rechnen im Binärsystem also immer noch funktioniert, können alle Werte einfach ins Binärsystem umgewandelt und dort berechnet werden.";
+
+"Computer (stark vereinfacht)" = "Computer (stark vereinfacht)";
+"Intro3.1" = "Computer sind aus logischen Gattern zusammengesetzt. Milliarden davon. Diese können die Entscheidung treffen, ob sie 'Strom an' (1) oder 'Strom aus' (0) ausgeben. Also genau wie Null und Eins im Binärsystem. Eine Ziffer im Binärsystem nennt man Bit.";
+"Intro3.2" = "Computer rechnen einfach im Binärsystem, da Gatter nur 0 und 1 können. Danach müssen die Werte nur zurück konvertiert werden. Computer können Zahlen ins Binärsystem umwandeln, dort können sie diese speichern und verarbeiten.";
+"Intro3.3" = "Einzelne Gatter können jedoch nur Entscheidungen treffen und nichts speichern. Kombiniert man mehrere Gatter, kann man ein Bit speichern. Eine solche Kombination aus Gattern nennt man FlipFlops. Mit mehreren FlipFlops baut man Register. Diese können dann mehrere Bits (z.B. 8, 16, 32) speichern.";
+
+"Assembly (vereinfacht)" = "Assembly (vereinfacht)";
+"Tippe mich an!" = "Tippe mich an!";
+"Intro4.1" = "In Assembly kann man dann die Werte, die in den Registern gespeichert sind bearbeiten. Die Register hier haben 8 Bit. 8 Bit nennt man 1 Byte. Um Zahlen im Binärsystem von Dezimalzahlen zu unterscheiden, werden Erstere mit 0b am beginnend gekennzeichnet.";
+"Intro4.2" = "Assembly ist eine sehr einfache Programmiersprache. Welche Operatoren in Assembly genutzt werden können, hängt davon ab, was für Gatter im Computer verbaut sind. Deshalb ist Assembly ein bisschen anders für jeden Typ von Computer.";
+
+/* Accessibility - VoiceOver Text */
+
+"A button with the number 0" = "Ein Button mit der Nummer 0";
+"A 0 will be added to the binary number you're entering" = "Eine 0 wird der eingegebenen binären Zahl hinzugefügt.";
+"A button with the number 1" = "Ein Button mit der Nummer 1";
+"A 1 will be added to the binary number you're entering" = "Eine 1 wird der eingegebenen binären Zahl hinzugefügt.";
+"Auswählen eines Registers" = "Auswählen eines Registers";
+"register "  = "register ";
+"Auswählen eines Komandos" = "Auswählen eines Befehls";
+"Komando " = "Befehl ";
+"Register %@ mit Wert %@ soll Wert  %@ haben" = "Register %@ mit Wert %@ soll Wert  %@ haben";
+"Picture of me" = "Ein Foto von mir";
+"Picture of Lakshmi, a chocolate Labrador" = "Ein Foto von Lakshmi, einem braunen Labrador";
+/* There is an issue because i dont know if you can toggle the bit */
+"%@ Bits next to each other." = "%@ Bits nebeneinander.";
+"A visualization of a Bit. It has a value of %@" = "Ein Bit mit dem Wert %@";
+"A visualisation of an 'AND' gate. The inputs are 1 & 0, the result is 0" = "Ein 'UND' Gatter. Die Inputs sind 1 & 0, das Ergebnis ist 0.";
+"A visualisation of an 'AND' gate. The inputs are 1 & 1, the result is 1" = "Ein 'UND' Gatter. Die Inputs sind 1 & 1, das Ergebnis ist 1.";
+"A visualisation of an 'AND' gate. The inputs are 0 & 1, the result is 0" = "Ein 'UND' Gatter. Die Inputs sind 0 & 1, das Ergebnis ist 0.";
+"Decimal to binary conversion" = "Dezimal zu binär Umrechnung";
+"0 becomes 0b0" = "0 wird 0b0";
+"1 becomes 0b1" = "1 wird 0b1";
+"2 becomes 0b0.1" = "2 wird 0b0.1";
+"3 becomes 0b11" = "3 wird 0b11";
+"A view showing how differnet symbols can be used to describe the same value. The examples are the number 10, the word code, the concept of music, and the nuber 5." = "Eine Ansicht die zeigt wie verschiedene Symbole genutzt werden können um gleiche Werte darzustellen. Die Beispiele sind die nummer 10, das wort 'code', das konzept Musik und die nummer 5.";
+"Emoji H.T.M.L like code" = "Emoji mit H.T.M.L mäßigem code";
+"Emoji of Guitars" = "Emoji mit Gitarren";
+"Emoji of a Dice showing the number 5" = "Emoji eines Würfels mit der Nummer 5";
+"Two images, one showing a cmputer chip and one showing a cpu." = "Zwei Bilder, eins zeigt einen Computerchip und eins zeigt eine CPU.";
+"A four bit register with the value 0. Then the value 7 is moved into it. now the register reads 0.1.1.1 in binary. Then 0.0.0.1 is moved into the register. it now reads 0.0.0.1." = "Ein 4 Bit register mit dem Wert 0. Dann wird der wert 7 hinein bewegt. In Binär steht jetzt 0111 im Register. Dann wird 0001 ins register bewegt. Nun steht 0001 im Register.";
+"A visualisation of a 4 bit register with the value 12. or 1.1.0.0 in binary. Through tapping you can change the value by toggeling the bits between 0 & 1." = "Ein 4 Bit Register mit dem Wert 12. oder 1.1.0.0 in Binär. Durch klicken kannst du den Wert der Bits ändern.";
+"A visualisation of an 8 bit register with the value 240. or 1.1.0.0 in binary. Through tapping you can change the value by toggeling the bits between 0 & 1." = "Ein 8 Bit register mit dem Wert 240, oder 1.1.0.0 in Binär. Durchanklicken kannst du den Wert der Bits ändern.";
+"A view showing 1+1 in binary system, as well as 1+1 in the decimal system. Both have the same result." = "Ein Bild welches 1+1 im binären sytem sowie im dezimalen System zeigt. Beide Rechnungen haben das gleiche Ergebnis.";
+"A visualisation of how the value 5 can look in different systems. There is a 5 in binary, a 5 on a dice, a 5 as a 'V' in roman numbers." = "Der Wert 5 in unterschiedlichen Zahlensystemen. Dort ist die 5 in Binär, eine 5 auf einem Würfel, 5 als 'V' in römischen Zahlen.";
+
+
+"You have caused an overflow! Unexpected behaviour might follow." = "Du hast einen Overflow (Überlauf) ausgelöst! Der Wert ist größer als das Register halten kann. Unerwartetes kann passieren.";
+"You have caused an underflow! Unexpected behaviour might follow." = "Du hast einen Underflow (Unterlauf) ausgelöst! Der Wert ist kleiner als das Register halten kann. Vorzeichenlose Integer können keine negativen Werte halten. Unerwartetes kann passieren.";
+
+
+"Help translating this app" = "Hilf diese App zu Übersetzen";
+"Try changing the result by tapping the bits" = "Versuche mal das Ergebnis zu verändern indem du die Bits antippst.";
+"If the first bit is 1, all the other bits need to be inverted. The first bit is used to show the sign of the value." = "Wenn das erste Bit 1 ist, dann müssen alle anderen Bits invertiert werden (Einerkomplement). Das erste Bit zeigt das Vorzeichen an.";
+"This value is now multiplied with -1." = "Dieser Wert wird nun mit -1 multipliziert";
+"Now 1 is subtracted from the value" = "Jetzt zieht man noch 1 ab. Das ist das Zweierkomplement.";
+
+"Show Intro Again" = "Intro nochmal ansehen";
