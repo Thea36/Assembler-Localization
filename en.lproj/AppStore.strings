@@ -1,0 +1,54 @@
+/* 
+  AppStore.strings
+  Assembler
+
+  Created by Lena Mattea Stöxen on 28.10.22.
+  
+*/
+
+/* Werbetext */
+"Learn Assembly and Binary Operations by making Art!
+New int v2:
+Cool new Animations!
+(please like them)
+Better support for dark mode!
+New (better) Intro" = "Learn Assembly and Binary Operations by making Art!
+New int v2:
+Cool new Animations!
+(please like them)
+Better support for dark mode!
+New (better) Intro";
+
+
+/* Description */
+"This App was made for the Swift Student Challenge 2022 and won!
+
+With 'The Assembler' you can learn Assembly and binary operations.
+Assembly is a low level coding language, which is specific to each chip. This Assembly is based on one for ARM-processors.
+You will be making little pixel art images with Assembly and learn some of the most common commands and binary operations.
+
+
+I hope you will be having some fun and maybe even learn something new."  = "This App was made for the Swift Student Challenge 2022 and won!
+
+ With 'The Assembler' you can learn Assembly and binary operations.
+Assembly is a low level coding language, which is specific to each chip. This Assembly is based on one for ARM-processors.
+You will be making little pixel art images with Assembly and learn some of the most common commands and binary operations.
+
+
+I hope you will be having some fun and maybe even learn something new.";
+
+/* Keywords */
+"assembly, programming, learning, binary, calculations, pixel, art, assembler, coding, WWDC22, WWDC" = "assembly, programming, learning, binary, calculations, pixel, art, assembler, coding, WWDC22, WWDC"
+
+/* New in this Version */
+"Better dark mode
+New (and better) Intro to Assembly and computers
+New Animations for Pixels! (I'm very proud of the Animations)
+Public Link for adding new Languages for my App
+Fixed some spelling
+New design for the slide appearing at the end of a chapter" = "Better dark mode
+New (and better) Intro to Assembly and computers
+New Animations for Pixels! (I'm very proud of the Animations)
+Public Link for adding new Languages for my App
+Fixed some spelling
+New design for the slide appearing at the end of a chapter"
